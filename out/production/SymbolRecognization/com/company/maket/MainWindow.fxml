@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.canvas.*?>
+<?import javafx.scene.chart.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="681.0" prefWidth="800.0" style="-fx-background-color: gray;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.company.Controllers.MainController">
+
+    <children>
+        <Button layoutX="57.0" layoutY="235.0" mnemonicParsing="false" onAction="#clear" prefHeight="37.0" prefWidth="160.0" text="Очистить" AnchorPane.leftAnchor="57.0" AnchorPane.rightAnchor="583.0" AnchorPane.topAnchor="235.0" />
+        <Button layoutX="37.0" layoutY="522.0" maxHeight="50.0" maxWidth="200.0" minHeight="40.0" minWidth="50.0" mnemonicParsing="false" onAction="#saveA" prefHeight="40.0" prefWidth="200.0" text="Сохранить шаблон буквы А" />
+        <Button layoutX="37.0" layoutY="328.0" mnemonicParsing="false" onAction="#saveD" prefHeight="40.0" prefWidth="200.0" text="Сохранить шаблон буквы Д" />
+        <Button layoutX="526.0" layoutY="75.0" mnemonicParsing="false" onAction="#loadData" prefHeight="40.0" prefWidth="200.0" text="Начать обучение" />
+        <Button layoutX="313.0" layoutY="75.0" mnemonicParsing="false" onAction="#calculate" prefHeight="40.0" prefWidth="200.0" text="Передать данные в нейросеть" />
+        <Button layoutX="37.0" layoutY="473.0" mnemonicParsing="false" onAction="#saveB" prefHeight="40.0" prefWidth="200.0" text="Сохранить шаблон буквы Б" />
+        <Button layoutX="37.0" layoutY="424.0" mnemonicParsing="false" onAction="#saveV" prefHeight="40.0" prefWidth="200.0" text="Сохранить шаблон буквы В" />
+        <Button layoutX="37.0" layoutY="375.0" mnemonicParsing="false" onAction="#saveG" prefHeight="40.0" prefWidth="200.0" text="Сохранить шаблон буквы Г" />
+        <Button layoutX="37.0" layoutY="279.0" mnemonicParsing="false" onAction="#saveE" prefHeight="40.0" prefWidth="200.0" text="Сохранить шаблон буквы E" />
+        <Canvas fx:id="inputCanvas" height="160.0" layoutX="57.0" layoutY="62.0" width="160.0" AnchorPane.leftAnchor="57.0" AnchorPane.topAnchor="62.0">
+         <effect>
+            <Blend />
+         </effect></Canvas>
+      <Label fx:id="status" layoutX="401.0" layoutY="27.0" text="Нейросеть не обучена" textAlignment="CENTER" underline="true">
+         <font>
+            <Font size="24.0" />
+         </font></Label>
+      <AreaChart fx:id="graphic" layoutX="276.0" layoutY="155.0">
+        <xAxis>
+          <CategoryAxis label="Итерация" side="BOTTOM" />
+        </xAxis>
+        <yAxis>
+          <NumberAxis label="Ошибка" side="LEFT" upperBound="70.0" />
+        </yAxis>
+      </AreaChart>
+    </children>
+
+</AnchorPane>
